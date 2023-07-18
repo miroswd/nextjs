@@ -33,6 +33,9 @@ export default function Home({ recommendedProducts }: HomeProps) {
 
     alert(sum(5, 4))
 
+    console.log("NEXT_PUBLIC:", process.env.NEXT_PUBLIC_API_URL)
+    console.log("API_URL:", process.env.API_URL)
+
   }
 
 
@@ -58,7 +61,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
 
  // TTFB:2s -> Time To First Byte: 2 seconds (delay to show content)
 
- const response = await fetch("http://localhost:3333/recommended")
+ const response = await fetch(`${process.env.API_URL}/recommended`)
  const recommendedProducts = await response.json();
 
  return {
