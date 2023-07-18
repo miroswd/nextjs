@@ -57,7 +57,7 @@ export default function Home({ recommendedProducts }: HomeProps) {
 
       {recommendedProducts.map(recommendedProduct => (
         <li key={recommendedProduct.id}>
-          <Link href={`/product/${recommendedProduct.uid}`}>
+          <Link href={`/products/${recommendedProduct.uid}`}>
               {PrismicDom.RichText.asText(recommendedProduct.data.title)}
           </Link>
         </li>
