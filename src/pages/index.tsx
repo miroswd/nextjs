@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { Title } from "@/styles/pages/Home";
 import { GetServerSideProps } from "next";
 
@@ -41,6 +42,12 @@ export default function Home({ recommendedProducts }: HomeProps) {
 
   return (
     <div>
+      <SEO 
+        image="banner.jpeg"
+        title="DevCommerce - your best e-commerce"
+        shouldExcludeTitleSuffix
+      />
+
       <Title>Products</Title>
 
       {recommendedProducts.map(recommendedProduct => (
