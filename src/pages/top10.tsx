@@ -15,7 +15,6 @@ export default function Top10({products}: Top10Props) {
     <div>
       <h1>Top 10</h1>
 
-
       <ul>
         {products.map(product => (
           <li key={product.id}>
