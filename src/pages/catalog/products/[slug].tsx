@@ -21,6 +21,12 @@ interface CategoryProps  {
 export default function Category({ products }: CategoryProps) {
   const router = useRouter();
 
+
+  if (router.isFallback) {
+    // indicates whether the page is in the process of static rendering
+    return <p>Carregamento...</p>
+  }
+
   return(
     <div>
       <h1>{router.query.slug}</h1>
@@ -51,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths, // which are the categories
-    fallback: false
+    fallback: true // when the first user call the new route will be generated the static page
   }
 }
 
