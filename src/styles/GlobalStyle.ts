@@ -11,7 +11,7 @@ export default createGlobalStyle`
   body {
     background-color: #121214;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Arial, Helvetica, sans-serif;
   }
 
 `
