@@ -29,13 +29,11 @@ const AddToCartModel = dynamic(
 
 export default function Product({product}: ProductProps){
   const router = useRouter();
-
+  const [isAddToCartModalVisible, setIsAddToCartModalVisible] = useState(false);
+  
   if (router.isFallback) {
     return <p>Loading...</p>
   }
-
-
-  const [isAddToCartModalVisible, setIsAddToCartModalVisible] = useState(false);
 
   function handleAddToCart() {
     setIsAddToCartModalVisible(true)
@@ -53,6 +51,8 @@ export default function Product({product}: ProductProps){
   
       <p>Price: ${product.data.price}</p>
 
+    
+       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={product.data.thumbnail.url} width="400" alt="product"/>
 
       <button onClick={handleAddToCart}>

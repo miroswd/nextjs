@@ -3,9 +3,10 @@ import Prismic from "prismic-javascript"
 
 export const apiEndpoint = process.env.PRISMIC_API;
 
+
 export const client = (req = null) => {
 
-  const options  = req ? { req } : null;
+  const options  = req ? { req } : {};
 
-  return Prismic.client(apiEndpoint, options)
+  return Prismic.client(String(apiEndpoint), options)
 }
