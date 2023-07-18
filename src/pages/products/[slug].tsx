@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 const AddToCartModel = dynamic(
-  () => import("@/src/components/AddToCartModel"), 
+  () => import("@/components/AddToCartModel"), 
   { loading: () => <p>Carregando...</p> }
 );
 
