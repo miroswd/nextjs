@@ -1,4 +1,4 @@
-import { Title } from "../styles/pages/Home"
+import { Title } from "@/styles/pages/Home";
 import { GetServerSideProps } from "next";
 
 // import math from "../lib/math"
@@ -29,7 +29,7 @@ export default function Home({ recommendedProducts }: HomeProps) {
 
   async function handleSum(){
     // load lib only when needed
-    const { sum } = (await import('../lib/math')).default;
+    const { sum } = (await import('@/lib/math')).default;
 
     alert(sum(5, 4))
 
